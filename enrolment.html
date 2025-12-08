@@ -489,7 +489,8 @@
 
                                 <div class="flex-col mt-4">
                                     <label for="gpa" class="input-label">Current GPA</label>
-                                    <input type="text" id="gpa" class="gpa-input input-field" placeholder="Enter GPA (e.g., 3.8)">
+                                    <input type="number" id="gpa" name="gpa" class="gpa-input input-field" placeholder="Enter GPA (e.g., 3.8)"
+                                       min="0" max="4" step="0.01" aria-describedby="gpa-hint">
                                     <p style="color: var(--red-600); font-weight: 700; margin-top: 0.5rem;" aria-live="polite">STATUS: Needs Immediate Review</p>
                                 </div>
                             </section>
