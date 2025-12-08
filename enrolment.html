@@ -416,7 +416,9 @@
                                 </div>
 
                                 <div class="flex-col">
-                                    <input type="email" id="email-address" class="input-field" placeholder="Email Address (required)">
+                                    <label for="email-address" class="input-label">Email Address (required)</label>
+                                    <input type="email" id="email-address" name="email" class="input-field" placeholder="Email Address (required)" required>
+
                                 </div>
                                 
                                 <div class="checkbox-group pt-4 items-start">
@@ -441,8 +443,8 @@
                                         <label for="comp-sci">Computer Science</label>
                                     </div>
                                     <div class="checkbox-group">
-                                        <input type="checkbox" class="checkbox-input">
-                                        <span>Mechanical Engineering</span>
+                                        <input type="checkbox" id="mech_eng" name="programs" class="checkbox-input">
+`                                       <label for="mech_eng">Mechanical Engineering</label>
                                     </div>
                                     <div class="checkbox-group">
                                         <input type="checkbox" id="history" class="checkbox-input">
@@ -451,7 +453,8 @@
                                 </div>
                                 
                                 <div class="flex-col mt-4">
-                                    <select id="entry-year" class="input-field">
+                                    <label for="entry-year" class="input-label">Entry Year</label>
+                                    <select id="entry-year" name="entry-year" class="input-field">
                                         <option value="">-- Select Entry Year --</option>
                                         <option value="2025">2025</option>
                                         <option value="2026">2026</option>
