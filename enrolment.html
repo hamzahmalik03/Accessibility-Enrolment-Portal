@@ -247,12 +247,14 @@
             background-color: var(--red-600);
         }
 
-        .form-status {
-            margin-top: 1rem;
-            text-align: center;
-            color: var(--green-600);
-            font-weight: 700;
+        .form-status { 
+            margin-top:1rem; 
+            text-align:center; 
+            color:var(--green-600); 
+            font-weight:700; 
+            outline: none; 
         }
+        .form-status.hidden { display:none; }
 
         .hidden {
             display: none;
@@ -364,10 +366,10 @@
     
     <script>
         function submitForm() {
-            console.log("Form submission triggered by non-semantic element.");
             const statusElement = document.getElementById('form-status');
             statusElement.textContent = "Application Submitted Successfully!";
             statusElement.classList.remove('hidden');
+            statusElement.focus();
         }
     </script>
 </head>
@@ -502,7 +504,7 @@
                                     &#x2715; 
                                 </button>
                             </div>
-                            <div id="form-status" class="form-status hidden"></div>
+                            <div id="form-status" class="form-status hidden" role="status" aria-live="polite" tabindex="-1"></div>
                         </form>
                     </td>
 
